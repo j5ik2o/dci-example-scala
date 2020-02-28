@@ -4,16 +4,18 @@ import java.time.Instant
 
 trait Account {
 
-  protected def createInstance(amount: Long): Account
+  type This <: Account
+
+  protected def createInstance(amount: Long): This
 
   def availableBalance: Long
 
-  def decreaseBalance(amount: Long): Account = {
+  def decreaseBalance(amount: Long): This = {
     require(amount >= 0)
     createInstance(availableBalance - amount)
   }
 
-  def increaseBalance(amount: Long): Account =  {
+  def increaseBalance(amount: Long): This =  {
     require(amount >= 0)
     createInstance(availableBalance + amount)
   }
