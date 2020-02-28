@@ -1,4 +1,4 @@
-package dci.example.typeclass
+package dci.example.typeclass.immutable
 
 trait TransferSource[A] {
   def transferTo(self: A)(amount: Long, recipient: CheckingAccount): (A, CheckingAccount)

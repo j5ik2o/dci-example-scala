@@ -1,4 +1,4 @@
-package dci.example.typeclass
+package dci.example.typeclass.immutable
 
 trait TransferSink[A] {
   def transferFrom(self: A)(amount: Long, src: Account): A

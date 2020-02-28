@@ -1,4 +1,4 @@
-package dci.example.typeclass
+package dci.example.typeclass.immutable
 
 import java.time.Instant
 
